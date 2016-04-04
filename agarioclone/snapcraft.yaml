@@ -1,0 +1,21 @@
+name: agario-clone
+version: 0.1-git
+summary: Agar.io clone written with Socket.IO and HTML5 canvas
+description: A simple but powerful Agar.IO clone built with socket.IO and HTML5 canvas on top of NodeJS.
+
+apps:
+  server:
+    command: bin/npm start
+    daemon: simple
+    plugs: [listener]
+
+plugs:
+  listener:
+    interface: old-security
+    caps: [network-listener]
+
+parts:
+  agario-clone:
+    plugin: nodejs
+    source-type: git
+    source: https://github.com/huytd/agar.io-clone.git
