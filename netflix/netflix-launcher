@@ -1,0 +1,6 @@
+#!/bin/sh
+export LD_LIBRARY_PATH="$SNAP/usr/lib/x86_64-linux-gnu/dri:$LD_LIBRARY_PATH"
+export LD_LIBRARY_PATH="$SNAP/usr/lib/x86_64-linux-gnu/gtk-3.0:$LD_LIBRARY_PATH"
+export LD_LIBRARY_PATH="$SNAP/usr/lib/x86_64-linux-gnu/gtk-2.0:$LD_LIBRARY_PATH"
+
+exec "$SNAP/usr/bin/google-chrome-stable" "--app=https://netflix.com" $*
