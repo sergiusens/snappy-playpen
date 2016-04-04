@@ -1,0 +1,62 @@
+name: krita
+version: 0.1
+summary: krita
+description: krita
+
+apps:
+  run:
+    command: usr/bin/krita
+    plugs: [no-security]
+
+plugs:
+  no-security:
+    interface: old-security
+    security-template: unconfined
+
+parts:
+  launcher:
+    plugin: copy
+    files:
+      launcher: bin/launcher
+  krita:
+    plugin: nil
+#    source: https://github.com/KDE/krita.git
+#    source-type: git
+    stage-packages:
+    - krita
+    - libpulse0
+    - calligra-libs
+    
+#    build-packages:
+#      - extra-cmake-modules
+#      - libkf5archive-dev
+#      - libkf5completion-dev
+#      - libkf5config-dev
+#      - libkf5coreaddons-dev
+#      - libkf5guiaddons-dev
+#      - libkf5i18n-dev
+#      - libkf5itemmodels-dev
+#      - libkf5itemviews-dev
+#      - libkf5widgetsaddons-dev
+#      - libkf5windowsystem-dev
+#      - libkf5kiocore5
+#      - qtbase5-dev
+#      - libqt5svg5-dev
+#      - qtdeclarative5-dev
+#      - libqt5x11extras5-dev
+#      - libqt5opengl5-dev
+#      - libeigen3-dev
+#      - libxi-dev
+#      - libboost-all-dev
+#      - libopenexr-dev
+#      - vc-dev
+#      - libexiv2-dev
+#      - libgsl-dev
+#      - liblcms2-dev
+#      - libpoppler-qt5-dev
+#      - shared-mime-info
+#      - libraw-dev
+#      - libfftw3-dev
+#      - libopencolorio-dev
+#      - libcurl4-gnutls-dev
+#      - libopenjpeg-dev
