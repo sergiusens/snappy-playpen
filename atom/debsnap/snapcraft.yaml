@@ -1,0 +1,42 @@
+name: atom
+version: 1.5.4-1~webupd8~0
+summary:  Atom text editor from GitHub
+description: Atom is a hackable text editor for the 21st century, developed by GitHub.
+ .
+ Atom is open source and built on top of atom-shell.
+ .
+ Atom is designed to be customizable, but also usable without needing to edit a config file.
+ .
+ Atom is modern, approachable, and hackable to the core.
+
+icon: atom.png
+
+apps:
+  atom:
+    command: atom
+    plugs: [no-security]
+plugs:
+  no-security:
+    interface: old-security
+    security-template: unconfined
+
+parts:
+  atom:
+    plugin: nil
+    stage-packages:
+      - atom
+      - gconf2
+      - gconf-service
+      - libgtk2.0-0
+      - libudev1
+      - libgcrypt20
+      - libgnome-keyring0
+      - gir1.2-gnomekeyring-1.0
+      - libnotify4
+      - libxtst6
+      - libnss3
+      - python
+      - gvfs-bin
+      - xdg-utils
+      - libdbus-1-3
+      - libcap2
