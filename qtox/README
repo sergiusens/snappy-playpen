@@ -1,0 +1,13 @@
+
+Pre-requisites
+
+Requires the use of the qtox repo. Enable ppa (without actually installing qtox) with the following prior to using snapcraft
+
+  sudo sh -c 'echo "deb https://pkg.tox.chat/debian/ nightly release" > /etc/apt/sources.list.d/tox.list'
+  wget -qO - https://pkg.tox.chat/debian/pkg.gpg.key | sudo apt-key add
+  sudo apt-get install apt-transport-https
+  sudo apt-get update -qq
+
+Building
+
+SNAPCRAFT_LOCAL_SOURCES=1 snapcraft snap
