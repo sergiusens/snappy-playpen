@@ -1,0 +1,39 @@
+name: qtox
+version: 1.3.0-nightly
+summary: Powerful Tox chat client that follows the Tox design guidelines.
+description: One to one chat with friends
+ * Group chats, File transfers, with previewing of images,
+ * Audio calls, including group calls, Video calls,
+ * Tox DNS and Tox URI support, Translations in various languages
+ * Avatars, Faux offline messages, History, Screenshots,
+ * Emoticons, Auto-updates on Windows and Mac, packages on Linux
+ * And many more options!
+
+apps:
+  run:
+    command: launcher
+    plugs: [no-security]
+
+plugs:
+  no-security:
+    interface: old-security
+    security-template: unconfined
+
+parts:
+  launcher:
+    plugin: copy
+    files:
+      launcher: bin/launcher
+  qtox:
+    plugin: nil
+    stage-packages:
+      - libsqlcipher0
+      - libwayland-egl1-mesa
+      - libwayland-cursor0
+      - libxcb-glx0
+      - libxi6
+      - libxcb-shape0
+      - libfontconfig1
+      - libxrender1
+      - libgl1-mesa-glx
+      - qtox
