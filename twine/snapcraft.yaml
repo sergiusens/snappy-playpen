@@ -1,0 +1,23 @@
+name: twine
+version: 2.0.11-hg
+summary: Twine is an open-source tool for telling interactive, nonlinear stories.
+description: You don't need to write any code to create a simple story with Twine,
+  but you can extend your stories with variables, conditional logic, images, CSS,
+  and JavaScript when you're ready.
+
+apps:
+  server:
+    command: bin/npm start
+    daemon: simple
+    plugs: [listener]
+
+plugs:
+  listener:
+    interface: old-security
+    caps: [network-listener]
+
+parts:
+  twine:
+    plugin: nodejs
+    source-type: hg
+    source: https://bitbucket.org/klembot/twinejs
