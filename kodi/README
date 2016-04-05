@@ -9,3 +9,7 @@ Requires the use of the kodi repo. Enable ppa (without actually installing kodi)
 Building
 
 SNAPCRAFT_LOCAL_SOURCES=1 snapcraft snap
+
+Status:-
+
+http://paste.ubuntu.com/15639376/

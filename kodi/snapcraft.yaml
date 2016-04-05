@@ -37,4 +37,6 @@ parts:
   kodi:
     plugin: nil
     stage-packages:
+      - libgl1-mesa-glx
+      - libgl1-mesa-dri
       - kodi
