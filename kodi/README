@@ -1,0 +1,11 @@
+
+Pre-requisites
+
+Requires the use of the kodi repo. Enable ppa (without actually installing kodi) with the following prior to using snapcraft
+
+  sudo add-apt-repository ppa:team-xbmc/xbmc-nightly
+  sudo apt-get update -qq
+
+Building
+
+SNAPCRAFT_LOCAL_SOURCES=1 snapcraft snap
