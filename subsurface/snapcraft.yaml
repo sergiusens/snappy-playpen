@@ -1,0 +1,79 @@
+name: subsurface
+version: 4.5.4+snap1
+summary: dive log program
+description: manage and display dive computer data
+icon: subsurface-icon.svg
+
+apps:
+  subsurface:
+    command: subsurface
+    plugs: [no-security]
+plugs:
+  no-security:
+    interface: old-security
+    security-template: unconfined
+
+parts:
+  marble:
+    plugin: cmake
+    configflags: [-DCMAKE_INSTALL_PREFIX=/usr, -DQTONLY=ON, -DBUILD_MARBLE_TESTS=FALSE, -DQT5BUILD=TRUE]
+    source: git://git.subsurface-divelog.org/marble
+    source-type: git
+    source-branch: Subsurface-branch
+    build-packages:
+      - qt5-default
+      - qtbase5-dev
+    
+  libdivecomputer:
+    plugin: cmake
+    source: git://git.subsurface-divelog.org/libdc
+    source-type: git
+    source-branch: Subsurface-branch
+    
+  subsurface:
+    plugin: cmake
+    configflags: [-DCMAKE_INSTALL_PREFIX=/usr, -DCMAKE_BUILD_TYPE=Release]
+    source: git://subsurface-divelog.org/subsurface
+    source-type: git
+    build-packages:
+      - git
+      - g++
+      - make
+      - autoconf
+      - libtool
+      - cmake
+      - pkg-config
+      - libxml2-dev
+      - libxslt1-dev
+      - libzip-dev
+      - libsqlite3-dev
+      - libusb-1.0-0-dev
+      - libgit2-dev
+
+      - qt5-default
+      - qtbase5-dev
+      - qtdeclarative5-dev
+      - qtdeclarative5-dev-tools
+
+      - qttools5-dev-tools
+      - libqt5svg5-dev
+      - libqt5webkit5-dev
+      - libqt5qml5
+      - libqt5quick5
+      - libqt5declarative5
+      - qtscript5-dev
+      - libssh2-1-dev
+      - libcurl4-openssl-dev
+      - qttools5-dev
+      - qtconnectivity5-dev
+    stage-packages:
+      - qtubuntu-desktop
+      - qml-module-qtsysteminfo
+    snap:
+      - -usr/share/doc
+      - -usr/include
+  environment:
+    plugin: copy
+    files:
+      subsurface.wrapper: bin/subsurface
+      snappy-qt5.conf: etc/xdg/qtchooser/snappy-qt5.conf
