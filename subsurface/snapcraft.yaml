@@ -14,25 +14,28 @@ plugs:
     security-template: unconfined
 
 parts:
-  marble:
-    plugin: cmake
-    configflags: [-DCMAKE_INSTALL_PREFIX=/usr, -DQTONLY=ON, -DBUILD_MARBLE_TESTS=FALSE, -DQT5BUILD=TRUE]
-    source: git://git.subsurface-divelog.org/marble
-    source-type: git
-    source-branch: Subsurface-branch
-    build-packages:
-      - qt5-default
-      - qtbase5-dev
+#  marble:
+#    plugin: cmake
+#    configflags: [-DCMAKE_INSTALL_PREFIX=/usr, -DQTONLY=ON, -DBUILD_MARBLE_TESTS=FALSE, -DQT5BUILD=TRUE]
+#    source: git://git.subsurface-divelog.org/marble
+#    source-type: git
+#    source-branch: Subsurface-branch
+#    build-packages:
+#      - qt5-default
+#      - qtbase5-dev
     
   libdivecomputer:
-    plugin: cmake
+    plugin: autotools
     source: git://git.subsurface-divelog.org/libdc
     source-type: git
     source-branch: Subsurface-branch
-    
+    snap:
+      - -usr/include    
+
   subsurface:
+    after: [libdivecomputer]
     plugin: cmake
-    configflags: [-DCMAKE_INSTALL_PREFIX=/usr, -DCMAKE_BUILD_TYPE=Release]
+    configflags: [-DCMAKE_INSTALL_PREFIX=/usr, -DCMAKE_BUILD_TYPE=Release, -DLIBDIVECOMPUTER_INCLUDE_DIR=../../parts/libdivecomputer/install/include]
     source: git://subsurface-divelog.org/subsurface
     source-type: git
     build-packages:
@@ -66,9 +69,11 @@ parts:
       - libcurl4-openssl-dev
       - qttools5-dev
       - qtconnectivity5-dev
+      - libmarble-dev
     stage-packages:
       - qtubuntu-desktop
       - qml-module-qtsysteminfo
+      - marble-qt
     snap:
       - -usr/share/doc
       - -usr/include
