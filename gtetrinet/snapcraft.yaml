@@ -1,0 +1,26 @@
+name: gtetrinet
+version: 0.7.11-3
+summary: multiplayer tetris-like game
+description: GTetrinet is a clone of Tetrinet, a multiplayer tetris variant for
+ Windows. It is compatible with the original tetrinet, although you need a
+ separate program, such as tetrinetx, to be able to create your own games.
+
+apps:
+  run:
+    command: launcher
+    plugs: [no-security]
+
+plugs:
+  no-security:
+    interface: old-security
+    security-template: unconfined
+
+parts:
+  launcher:
+    plugin: copy
+    files:
+      launcher: bin/launcher
+  gtetrinet:
+    plugin: nil
+    stage-packages:
+      - gtetrinet

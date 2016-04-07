@@ -1,0 +1,14 @@
+
+Pre-requisites
+
+* None
+
+Building
+
+SNAPCRAFT_LOCAL_SOURCES=1 snapcraft snap
+
+Issues
+
+Theming issue...
+http://imgur.com/LFsy2ol
+http://paste.ubuntu.com/15678628/
