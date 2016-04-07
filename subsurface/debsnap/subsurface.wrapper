@@ -48,4 +48,4 @@ export LIBGL_DRIVERS_PATH=$SNAP/usr/lib/$ARCH/dri
 export APP_DIR=$SNAP
 
 cd $SNAP
-exec $SNAP/usr/bin/qmlscene $SNAP/usr/share/ubuntu-clock-app/ubuntu-clock-app.qml
+exec $SNAP/usr/bin/subsurface

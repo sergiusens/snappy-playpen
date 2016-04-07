@@ -1,0 +1,8 @@
+#!/bin/sh
+
+sudo snappy remove subsurface
+snapcraft clean
+rm ./*.snap
+SNAPCRAFT_LOCAL_SOURCES=1 snapcraft snap
+sudo snappy install subsurface_4.5.4+snap1_amd64.snap
+subsurface.subsurface
