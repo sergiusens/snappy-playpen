@@ -1,0 +1,27 @@
+name: subsurface
+version: 4.5.4+snap1
+summary: dive log program
+description: manage and display dive computer data
+icon: subsurface-icon.svg
+
+apps:
+  subsurface:
+    command: subsurface
+    plugs: [no-security]
+plugs:
+  no-security:
+    interface: old-security
+    security-template: unconfined
+
+parts:
+  subsurface:
+    plugin: nil
+    stage-packages:
+      - subsurface
+      - qtubuntu-desktop
+      - qml-module-qtsysteminfo
+  environment:
+    plugin: copy
+    files:
+      subsurface.wrapper: bin/subsurface
+      snappy-qt5.conf: etc/xdg/qtchooser/snappy-qt5.conf
