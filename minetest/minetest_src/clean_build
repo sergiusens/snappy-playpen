@@ -1,0 +1,8 @@
+#!/bin/sh
+
+sudo snappy remove minetest
+snapcraft clean
+rm ./*.snap
+SNAPCRAFT_LOCAL_SOURCES=1 snapcraft snap
+sudo snappy install minetest_0.4.13_amd64.snap
+minetest.run

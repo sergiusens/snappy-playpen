@@ -1,0 +1,12 @@
+
+Pre-requisites
+
+* None
+
+Building
+
+SNAPCRAFT_LOCAL_SOURCES=1 snapcraft snap
+
+Issues
+
+Currently broken due to permission issue and known libGL issue https://trello.com/c/Rwt1nitw/12-libgl-access-in-snaps
