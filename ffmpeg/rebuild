@@ -1,0 +1,4 @@
+#!/bin/sh
+
+SNAPCRAFT_LOCAL_SOURCES=1 snapcraft snap
+sudo snappy install ffmpeg_3.0~git_amd64.snap
