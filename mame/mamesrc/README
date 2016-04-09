@@ -1,0 +1,15 @@
+
+Pre-requisites
+
+Building
+
+snapcraft snap
+
+Note: Takes a very long time to build, even with multiple cores.
+
+Issues
+
+Needs a way to copy the executable in rather than doing a "make install" as mame makefile has no config for that.
+Perhaps needs a plugin which does make but copies files into place?
+
+Currently broken due to libGL issue https://trello.com/c/Rwt1nitw/12-libgl-access-in-snaps

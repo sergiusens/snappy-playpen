@@ -1,0 +1,28 @@
+
+Pre-requisites
+
+Building
+
+SNAPCRAFT_LOCAL_SOURCES=1 snapcraft snap
+
+Issues
+
+Currently broken due to libGL issue https://trello.com/c/Rwt1nitw/12-libgl-access-in-snaps
+
+alan@gort:~/Development/Snappy/snappy-playpen/mame/mamedeb$ mame.run
++ ARCH=x86_64-linux-gnu
++ export LD_LIBRARY_PATH=/snaps/mame.sideload/LVnNPgmJJBLC/usr/lib/x86_64-linux-gnu/pulseaudio:/snaps/mame.sideload/LVnNPgmJJBLC/usr/lib:/snaps/mame.sideload/LVnNPgmJJBLC/usr/lib/x86_64-linux-gnu:/snaps/mame.sideload/LVnNPgmJJBLC/usr/lib/x86_64-linux-gnu/pulseaudio:/snaps/mame.sideload/LVnNPgmJJBLC/usr/lib/x86_64-linux-gnu/mesa-egl:/snaps/mame.sideload/LVnNPgmJJBLC/lib:/snaps/mame.sideload/LVnNPgmJJBLC/usr/lib:/snaps/mame.sideload/LVnNPgmJJBLC/lib/x86_64-linux-gnu:/snaps/mame.sideload/LVnNPgmJJBLC/usr/lib/x86_64-linux-gnu:
++ export LD_LIBRARY_PATH=/snaps/mame.sideload/LVnNPgmJJBLC/usr/lib/x86_64-linux-gnu/dri:/snaps/mame.sideload/LVnNPgmJJBLC/usr/lib/x86_64-linux-gnu/pulseaudio:/snaps/mame.sideload/LVnNPgmJJBLC/usr/lib:/snaps/mame.sideload/LVnNPgmJJBLC/usr/lib/x86_64-linux-gnu:/snaps/mame.sideload/LVnNPgmJJBLC/usr/lib/x86_64-linux-gnu/pulseaudio:/snaps/mame.sideload/LVnNPgmJJBLC/usr/lib/x86_64-linux-gnu/mesa-egl:/snaps/mame.sideload/LVnNPgmJJBLC/lib:/snaps/mame.sideload/LVnNPgmJJBLC/usr/lib:/snaps/mame.sideload/LVnNPgmJJBLC/lib/x86_64-linux-gnu:/snaps/mame.sideload/LVnNPgmJJBLC/usr/lib/x86_64-linux-gnu:
++ export LD_LIBRARY_PATH=/snaps/mame.sideload/LVnNPgmJJBLC/usr/lib/x86_64-linux-gnu/qt5/libs:/snaps/mame.sideload/LVnNPgmJJBLC/usr/lib/x86_64-linux-gnu/dri:/snaps/mame.sideload/LVnNPgmJJBLC/usr/lib/x86_64-linux-gnu/pulseaudio:/snaps/mame.sideload/LVnNPgmJJBLC/usr/lib:/snaps/mame.sideload/LVnNPgmJJBLC/usr/lib/x86_64-linux-gnu:/snaps/mame.sideload/LVnNPgmJJBLC/usr/lib/x86_64-linux-gnu/pulseaudio:/snaps/mame.sideload/LVnNPgmJJBLC/usr/lib/x86_64-linux-gnu/mesa-egl:/snaps/mame.sideload/LVnNPgmJJBLC/lib:/snaps/mame.sideload/LVnNPgmJJBLC/usr/lib:/snaps/mame.sideload/LVnNPgmJJBLC/lib/x86_64-linux-gnu:/snaps/mame.sideload/LVnNPgmJJBLC/usr/lib/x86_64-linux-gnu:
++ export QT_PLUGIN_PATH=/snaps/mame.sideload/LVnNPgmJJBLC/usr/lib/x86_64-linux-gnu/qt5/plugins
++ export XDG_DATA_HOME=/snaps/mame.sideload/LVnNPgmJJBLC/usr/share
++ export FONTCONFIG_PATH=/snaps/mame.sideload/LVnNPgmJJBLC/etc/fonts/config.d
++ export FONTCONFIG_FILE=/snaps/mame.sideload/LVnNPgmJJBLC/etc/fonts/fonts.conf
++ export XKB_CONFIG_ROOT=/snaps/mame.sideload/LVnNPgmJJBLC/usr/share/X11/xkb
++ export LIBGL_DEBUG=verbose
++ exec /snaps/mame.sideload/LVnNPgmJJBLC/usr/games/mame
+Ignoring MAME exception: Unable to load opengl library: <default>
+
+FATALERROR: Unable to load opengl library: <default>
+
+Segmentation fault (core dumped)
