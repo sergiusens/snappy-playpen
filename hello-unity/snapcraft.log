@@ -1,0 +1,40 @@
+Preparing to pull hello-unity 
+Hit http://us.archive.ubuntu.com/ubuntu xenial InRelease
+Hit http://us.archive.ubuntu.com/ubuntu xenial-updates InRelease
+Hit http://security.ubuntu.com/ubuntu xenial-security InRelease
+Fetched 0 B in 0s (0 B/s)
+Skipping blacklisted from manifest packages: ['adduser', 'apt', 'apt-utils', 'base-files', 'base-passwd', 'bash', 'bsdutils', 'coreutils', 'dash', 'debconf', 'debconf-i18n', 'debianutils', 'diffutils', 'dmsetup', 'dpkg', 'e2fslibs', 'e2fsprogs', 'file', 'findutils', 'gcc-4.9-base', 'gcc-5-base', 'gnupg', 'gpgv', 'grep', 'gzip', 'hostname', 'init', 'initscripts', 'insserv', 'libacl1', 'libapparmor1', 'libattr1', 'libaudit-common', 'libaudit1', 'libblkid1', 'libbz2-1.0', 'libc-bin', 'libc6', 'libcap2', 'libcap2-bin', 'libcomerr2', 'libcryptsetup4', 'libdb5.3', 'libdebconfclient0', 'libdevmapper1.02.1', 'libgcc1', 'libgcrypt20', 'libgpg-error0', 'libgpm2', 'libkmod2', 'liblocale-gettext-perl', 'liblzma5', 'libmagic1', 'libmount1', 'libncurses5', 'libncursesw5', 'libpam-modules', 'libpam-modules-bin', 'libpam-runtime', 'libpam0g', 'libpcre3', 'libreadline6', 'libselinux1', 'libsemanage-common', 'libsemanage1', 'libsepol1', 'libslang2', 'libsmartcols1', 'libss2', 'libstdc++6', 'libsystemd0', 'libtext-charwidth-perl', 'libtext-iconv-perl', 'libtext-wrapi18n-perl', 'libtinfo5', 'libudev1', 'libusb-0.1-4', 'libustr-1.0-1', 'libuuid1', 'locales', 'login', 'lsb-base', 'makedev', 'manpages', 'manpages-dev', 'mawk', 'mount', 'multiarch-support', 'ncurses-base', 'ncurses-bin', 'passwd', 'perl-base', 'procps', 'readline-common', 'sed', 'sensible-utils', 'systemd', 'systemd-sysv', 'sysv-rc', 'sysvinit-utils', 'tar', 'tzdata', 'ubuntu-keyring', 'udev', 'util-linux', 'zlib1g']
+Fetched 0 B in 0s (0 B/s)
+Pulling hello-unity 
+No revisions or tags to pull.
+python2 /home/mhall/projects/Ubuntu/snaps/snappy-playpen/hello-unity/parts/hello-unity/install/usr/bin/easy_install --prefix /home/mhall/projects/Ubuntu/snaps/snappy-playpen/hello-unity/parts/hello-unity/install/usr pip
+Searching for pip
+Best match: pip 8.1.1
+Processing pip-8.1.1-py2.7.egg
+pip 8.1.1 is already the active version in easy-install.pth
+Installing pip script to /home/mhall/projects/Ubuntu/snaps/snappy-playpen/hello-unity/parts/hello-unity/install/usr/bin
+Installing pip2.7 script to /home/mhall/projects/Ubuntu/snaps/snappy-playpen/hello-unity/parts/hello-unity/install/usr/bin
+Installing pip2 script to /home/mhall/projects/Ubuntu/snaps/snappy-playpen/hello-unity/parts/hello-unity/install/usr/bin
+
+Using /home/mhall/projects/Ubuntu/snaps/snappy-playpen/hello-unity/parts/hello-unity/install/usr/lib/python2.7/dist-packages/pip-8.1.1-py2.7.egg
+Processing dependencies for pip
+Finished processing dependencies for pip
+python2 /home/mhall/projects/Ubuntu/snaps/snappy-playpen/hello-unity/parts/hello-unity/install/usr/bin/pip2 install --global-option=build_ext --global-option=-I/home/mhall/projects/Ubuntu/snaps/snappy-playpen/hello-unity/parts/hello-unity/install/usr/include/python2.7 --target /home/mhall/projects/Ubuntu/snaps/snappy-playpen/hello-unity/parts/hello-unity/install/usr/lib/python2.7/site-packages .
+Processing /home/mhall/projects/Ubuntu/snaps/snappy-playpen/hello-unity/parts/hello-unity/src
+Installing collected packages: hello-unity
+  Running setup.py install for hello-unity: started
+    Running setup.py install for hello-unity: finished with status 'error'
+    Complete output from command /home/mhall/projects/Ubuntu/snaps/snappy-playpen/hello-unity/parts/hello-unity/install/usr/bin/python2 -u -c "import setuptools, tokenize;__file__='/tmp/pip-WmPupa-build/setup.py';exec(compile(getattr(tokenize, 'open', open)(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))" build_ext -I/home/mhall/projects/Ubuntu/snaps/snappy-playpen/hello-unity/parts/hello-unity/install/usr/include/python2.7 install --record /tmp/pip-GIIwsc-record/install-record.txt --single-version-externally-managed --compile --home=/tmp/tmpKTEaYf:
+    ERROR: Python module indicator not found
+    ERROR: Python module launcher not found
+    ERROR: Python module messagemenu not found
+    ERROR: Python module soundmenu not found
+    ERROR: Python module notifications not found
+    usage: -c [global_opts] cmd1 [cmd1_opts] [cmd2 [cmd2_opts] ...]
+       or: -c --help [cmd1 cmd2 ...]
+       or: -c --help-commands
+       or: -c cmd --help
+    
+    error: option --single-version-externally-managed not recognized
+    
+    ----------------------------------------

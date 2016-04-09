@@ -1,0 +1,34 @@
+name: hello-unity
+version: 0.4-snap1
+summary: Unity APIs demonstration tool
+description: Simple tool for demonstrating Unity's integration APIs
+
+apps:
+  hello-unity:
+    command: hello-unity
+    plugs: [no-security]
+plugs:
+  no-security:
+    interface: old-security
+    security-template: unconfined
+
+parts:
+  hello-unity:
+    plugin: python2
+    source: lp:hello-unity
+    source-type: bzr
+    build-packages:
+      - python-distutils-extra
+    stage-packages:
+      - python-distutils-extra
+      - gir1.2-unity-5.0
+      - gir1.2-notify-0.7
+      - gir1.2-appindicator3-0.1
+      - gir1.2-indicate-0.7
+      - gir1.2-gtk-3.0
+      - gir1.2-gtksource-3.0
+
+  environment:
+    plugin: copy
+    files:
+      hello-unity.wrapper: bin/hello-unity
