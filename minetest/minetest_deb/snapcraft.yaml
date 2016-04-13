@@ -9,13 +9,7 @@ description: Minetest is a minecraft-inspired game written from scratch and lice
 apps:
   run:
     command: minetest
-    plugs: [no-security]
-
-plugs:
-  x11: interface x11
-  no-security:
-    interface: old-security
-    security-template: unconfined
+    plugs: [x11]
 
 parts:
   launcher:
