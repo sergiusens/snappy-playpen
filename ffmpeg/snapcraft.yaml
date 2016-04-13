@@ -21,6 +21,12 @@ apps:
   ffplay:
     command: ffplay.launcher
     plugs: [no-security]
+  ffprobe:
+    command: ffprobe.launcher
+    plugs: [no-security]
+  ffserver:
+    command: ffserver.launcher
+    plugs: [no-security]
 
 plugs:
   no-security:
@@ -33,6 +39,9 @@ parts:
     files:
       ffmpeg.launcher: ffmpeg.launcher
       ffplay.launcher: ffplay.launcher
+      ffprobe.launcher: ffprobe.launcher
+      ffserver.launcher: ffserver.launcher
+
   ffmpeg:
     plugin: autotools
     configflags: [--enable-gpl, --enable-libass, --enable-libfreetype, --enable-libmp3lame, --enable-libopus, --enable-libtheora, --enable-libvorbis, --enable-libvpx, --enable-libx264, --enable-libx265, --enable-nonfree]
@@ -42,6 +51,7 @@ parts:
       - git
       - g++
       - make
+      - yasm
       - autoconf
       - libtool
       - cmake
@@ -64,3 +74,4 @@ parts:
       - libmp3lame-dev
       - libopus-dev
       - libx265-dev
+      - libvpx-dev
