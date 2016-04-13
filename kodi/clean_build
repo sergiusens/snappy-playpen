@@ -1,8 +1,8 @@
 #!/bin/sh
 
-sudo snappy remove kodi
+sudo snap remove kodi
 snapcraft clean
 rm ./*.snap
 SNAPCRAFT_LOCAL_SOURCES=1 snapcraft snap
-sudo snappy install kodi_17.0~git_amd64.snap
+sudo snap install ./kodi_17.0~git_amd64.snap
 kodi.run

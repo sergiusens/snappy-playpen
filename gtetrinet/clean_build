@@ -1,8 +1,8 @@
 #!/bin/sh
 
-sudo snappy remove gtetrinet
+sudo snap remove gtetrinet
 snapcraft clean
 rm ./*.snap
 SNAPCRAFT_LOCAL_SOURCES=1 snapcraft snap
-sudo snappy install gtetrinet_0.7.11-3_amd64.snap
+sudo snap install ./gtetrinet_0.7.11-3_amd64.snap
 gtetrinet.run
