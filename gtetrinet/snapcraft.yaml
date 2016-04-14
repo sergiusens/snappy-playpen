@@ -8,12 +8,7 @@ description: GTetrinet is a clone of Tetrinet, a multiplayer tetris variant for
 apps:
   run:
     command: launcher
-    plugs: [no-security]
-
-plugs:
-  no-security:
-    interface: old-security
-    security-template: unconfined
+    plugs: [x11, network]
 
 parts:
   launcher:
