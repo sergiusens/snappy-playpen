@@ -7,12 +7,7 @@ apps:
   server:
     command: bin/npm start
     daemon: simple
-    plugs: [listener]
-
-plugs:
-  listener:
-    interface: old-security
-    caps: [network-listener]
+    plugs: [network-bind]
 
 parts:
   agario-clone:
