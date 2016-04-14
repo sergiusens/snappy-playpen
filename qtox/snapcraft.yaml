@@ -12,12 +12,7 @@ description: One to one chat with friends
 apps:
   run:
     command: launcher
-    plugs: [no-security]
-
-plugs:
-  no-security:
-    interface: old-security
-    security-template: unconfined
+    plugs: [network]
 
 parts:
   launcher:
