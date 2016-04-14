@@ -6,11 +6,7 @@ description: Simple tool for demonstrating Unity's integration APIs
 apps:
   hello-unity:
     command: hello-unity
-    plugs: [no-security]
-plugs:
-  no-security:
-    interface: old-security
-    security-template: unconfined
+    plugs: [unity7]
 
 parts:
   hello-unity:
