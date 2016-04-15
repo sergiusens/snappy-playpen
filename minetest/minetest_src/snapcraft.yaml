@@ -9,7 +9,7 @@ description: Minetest is a minecraft-inspired game written from scratch and lice
 apps:
   run:
     command: launcher
-    plugs: [network, network-bind]
+    plugs: [network, network-bind, unity7, opengl]
 
 parts:
   launcher:

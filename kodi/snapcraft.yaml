@@ -22,12 +22,7 @@ description:  Kodi, formerly known as XBMC is an award winning free and
 apps:
   run:
     command: launcher
-    plugs: [no-security]
-
-plugs:
-  no-security:
-    interface: old-security
-    security-template: unconfined
+    plugs: [network, network-bind, unity7, opengl]
 
 parts:
   launcher:
