@@ -9,5 +9,6 @@ export FONTCONFIG_PATH="$SNAP/etc/fonts/config.d"
 export FONTCONFIG_FILE="$SNAP/etc/fonts/fonts.conf"
 export XKB_CONFIG_ROOT="$SNAP/usr/share/X11/xkb"
 export LIBGL_DEBUG="verbose"
+env
 
-exec "$SNAP/usr/games/mame" $*
+exec "$SNAP/usr/games/mame -v -inipath $SNAP" $*

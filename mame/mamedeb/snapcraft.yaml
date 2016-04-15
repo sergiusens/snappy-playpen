@@ -24,6 +24,7 @@ parts:
     plugin: copy
     files:
       launcher: bin/launcher
+      mame.ini: mame.ini
   mame:
     plugin: nil
     stage-packages:

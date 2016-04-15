@@ -1,8 +1,8 @@
 #!/bin/sh
 
-sudo snappy remove mame
+sudo snap remove mame
 snapcraft clean
 rm ./*.snap
 SNAPCRAFT_LOCAL_SOURCES=1 snapcraft snap
-sudo snappy install mame_0.16_amd64.snap
+sudo snap install ./mame_0.160_amd64.snap
 mame.run
