@@ -16,12 +16,7 @@ description: 2D game development framework based on Lua and OpenGL
 apps:
   run:
     command: launcher
-    plugs: [no-security]
-
-plugs:
-  no-security:
-    interface: old-security
-    security-template: unconfined
+    plugs: [network, network-bind, unity7, opengl]
 
 parts:
   launcher:

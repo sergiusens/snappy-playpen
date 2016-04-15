@@ -12,12 +12,7 @@ description: MAME is a hardware emulator. it faithfully reproduces the behaviour
 apps:
   run:
     command: launcher
-    plugs: [no-security]
-
-plugs:
-  no-security:
-    interface: old-security
-    security-template: unconfined
+    plugs: [network, network-bind, unity7, opengl]
 
 parts:
   launcher:
