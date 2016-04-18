@@ -1,4 +1,4 @@
-#!/bin/sh -x
+#!/bin/sh
 ARCH="x86_64-linux-gnu"
 export LD_LIBRARY_PATH="$SNAP/usr/lib/$ARCH/pulseaudio:$LD_LIBRARY_PATH"
 export LD_LIBRARY_PATH="$SNAP/usr/lib/$ARCH/dri:$LD_LIBRARY_PATH"
@@ -9,6 +9,8 @@ export FONTCONFIG_PATH="$SNAP/etc/fonts/config.d"
 export FONTCONFIG_FILE="$SNAP/etc/fonts/fonts.conf"
 export XKB_CONFIG_ROOT="$SNAP/usr/share/X11/xkb"
 export LIBGL_DEBUG="verbose"
-env
+#env
+launch="$SNAP/usr/games/mame -v -inipath $SNAP $*"
+echo "Running following command to launch app:- $launch"
 
-exec "$SNAP/usr/games/mame -v -inipath $SNAP" $*
+exec "$launch"
