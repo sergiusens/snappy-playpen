@@ -12,7 +12,7 @@ description: One to one chat with friends
 apps:
   run:
     command: launcher
-    plugs: [network]
+    plugs: [network, unity7, opengl]
 
 parts:
   launcher:

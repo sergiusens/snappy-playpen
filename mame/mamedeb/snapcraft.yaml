@@ -10,7 +10,7 @@ description: MAME is a hardware emulator. it faithfully reproduces the behaviour
  This package provides the MAME binary and configuration files.
 
 apps:
-  run:
+  mame:
     command: launcher
     plugs: [network, network-bind, unity7, opengl]
 

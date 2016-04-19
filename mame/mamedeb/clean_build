@@ -5,4 +5,4 @@ snapcraft clean
 rm ./*.snap
 SNAPCRAFT_LOCAL_SOURCES=1 snapcraft snap
 sudo snap install ./mame_0.160_amd64.snap
-mame.run
+# mame
