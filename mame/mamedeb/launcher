@@ -13,4 +13,4 @@ export LIBGL_DEBUG="verbose"
 launch="$SNAP/usr/games/mame -v -inipath $SNAP $*"
 echo "Running following command to launch app:- $launch"
 
-exec "$launch"
+$launch

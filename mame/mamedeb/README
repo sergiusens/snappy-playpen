@@ -7,5 +7,6 @@ SNAPCRAFT_LOCAL_SOURCES=1 snapcraft snap
 
 Issues
 
-* Needs access to an ini file
 * Needs access to fontconfig 
+* Needs access to udev
+  https://bugs.launchpad.net/ubuntu/+source/snapd/+bug/1570860
