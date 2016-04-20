@@ -1,0 +1,43 @@
+name: bsdgames
+version: 1
+summary: collection of classic textual unix games
+description: |
+  This is a collection of some of the text-based games and amusements that
+  have been enjoyed for decades on unix systems.
+  .
+  It includes these programs: adventure, arithmetic, atc, backgammon,
+  battlestar, bcd, boggle, caesar, canfield, countmail, cribbage, dab,
+  go-fish, gomoku, hack, hangman, hunt, mille, monop, morse, number,
+  pig, phantasia, pom, ppt, primes, quiz, random, rain, robots, rot13,
+  sail, snake, tetris, trek, wargames, worm, worms, wump, wtf
+
+apps:
+  canfield:
+    command: usr/games/canfield
+  tetris:
+    command: usr/games/tetris-bsd
+  cribbage:
+    command: usr/games/cribbage
+  robots:
+    command: usr/games/robots
+  phantasia:
+    command: usr/games/phantasia
+  atc:
+    command: usr/games/atc
+  battlestar:
+    command: usr/games/battlestar
+  hack:
+    command: usr/games/hack
+  sail:
+    command: usr/games/sail
+  snake:
+    command: usr/games/snake
+  boggle:
+    command: usr/games/boggle
+
+
+parts:
+  games:
+    plugin: nil
+    stage-packages:
+      - bsdgames
