@@ -21,6 +21,7 @@ parts:
     - krita
     - libpulse0
     - calligra-libs
+    - libqtcore4
     
 #    build-packages:
 #      - extra-cmake-modules
