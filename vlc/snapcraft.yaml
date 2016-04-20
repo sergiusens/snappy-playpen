@@ -186,7 +186,6 @@ parts:
       - libglu1-mesa
       - libglu1-mesa-dev
       - libgme0
-      - libgmpv4-dev
       - libgmpxxv4-4
       - libgnutls-dev
       - libgnutls28-dev
