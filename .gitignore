@@ -1,3 +1,5 @@
 *.snap
 .bzr
 .bzrignore
+__pycache__
+*~

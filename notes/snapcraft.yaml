@@ -27,5 +27,7 @@ parts:
       - libqt5core5a
   launcher:
     plugin: copy
+    after: [notes]
     files:
-      ../bin/Notes: bin/notes
+      notes.wrapper: bin/notes
+      ../../notes/build/bin/Notes: bin/Notes
