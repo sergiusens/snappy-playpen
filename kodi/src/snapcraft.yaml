@@ -1,0 +1,127 @@
+name: kodi
+version: 16.0-0
+summary: media player and entertainment hub for digital media
+description: Kodi functions very well as a standard media player application
+        for your computer. It has also been designed to be the perfect
+        companion for your HTPC. Supporting an almost endless range of remote
+        controls, and combined with its beautiful interface and powerful
+        skinning engine, Kodi feels very natural to use from the couch and is
+        the ideal solution for your home theater.
+
+apps:
+  kodi:
+    command: usr/local/lib/kodi/kodi.bin
+
+parts:
+  kodi:
+    source: https://github.com/xbmc/xbmc/archive/16.0-Jarvis.tar.gz
+    plugin: bootstrapping_autotools
+    configflags:
+      - --disable-non-free
+      - --disable-dbus
+      - --disable-mysql
+      - --disable-dvdcss
+      - --enable-libcec
+      - --enable-libusb
+      - --enable-silent-rules
+      - --with-ffmpeg=shared
+
+    build-packages:
+      - cmake
+      - fp-compiler
+      - gettext
+      - gperf
+      - libasound2-dev
+      - libass-dev
+      - libavahi-client-dev
+      - libavcodec-dev
+      - libavdevice-dev
+      - libavfilter-dev
+      - libavformat-dev
+      - libavresample-dev
+      - libbluetooth-dev
+      - libboost-dev
+      - libboost-thread-dev
+      - libbz2-dev
+      - libcap-dev
+      - libcdio-dev
+      - libcec-dev
+      - libcec-platform-dev
+      - libcpluff0-dev
+      - libcrossguid-dev
+      - libcurl3
+      - libcurl4-openssl-dev
+      - libdbus-1-dev
+      - libfreetype6-dev
+      - libfribidi-dev
+      - libgif-dev
+      - libglew-dev
+      - libiso9660-dev
+      - libjasper-dev
+      - libjpeg-dev
+      - liblzo2-dev
+      - libmicrohttpd-dev
+      - libmodplug-dev
+      - libmpeg2-4-dev
+      - libmpeg3-dev
+      - libnfs-dev
+      - libogg-dev
+      - libpcre3-dev
+      - libplist-dev
+      - libpostproc-dev
+      - libpulse-dev
+      - libsdl2-dev
+      - libsmbclient-dev
+      - libsqlite3-dev
+      - libssh-dev
+      - libssl-dev
+      - libswresample-dev
+      - libtag1-dev
+      - libtinyxml-dev
+      - libtool
+      - libudev-dev
+      - libusb-dev
+      - libva-dev
+      - libvdpau-dev
+      - libvorbis-dev
+      - libvorbisenc2
+      - libxml2-dev
+      - libxmu-dev
+      - libxrandr-dev
+      - libxrender-dev
+      - libxslt1-dev
+      - libxt-dev
+      - libyajl-dev
+      - mesa-utils
+      - nasm
+      - python-dev
+      - python-imaging
+      - python-sqlite
+      - swig
+      - unzip
+      - uuid-dev
+      - yasm
+      - zlib1g-dev
+    after:
+      - dcadec
+      - taglib
+      - ffmpeg
+
+    stage:
+      - -include
+
+  dcadec:
+    source: https://github.com/foo86/dcadec/archive/v0.2.0.tar.gz
+    plugin: make
+
+  taglib:
+    source: https://github.com/taglib/taglib/archive/v1.10.tar.gz
+    plugin: cmake
+
+  ffmpeg:
+    source: https://www.ffmpeg.org/releases/ffmpeg-2.8.6.tar.xz
+    plugin: fake_autotools
+    install-via: prefix
+
+    stage:
+      - -bin
