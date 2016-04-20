@@ -6,12 +6,7 @@ description: krita
 apps:
   run:
     command: usr/bin/krita
-    plugs: [no-security]
-
-plugs:
-  no-security:
-    interface: old-security
-    security-template: unconfined
+    plugs: [unity7, x11]
 
 parts:
   launcher:
