@@ -7,11 +7,7 @@ icon: subsurface-icon.svg
 apps:
   subsurface:
     command: subsurface
-    plugs: [no-security]
-plugs:
-  no-security:
-    interface: old-security
-    security-template: unconfined
+    plugs: [unity7, x11]
 
 parts:
 #  marble:
@@ -66,7 +62,6 @@ parts:
       - libqt5declarative5
       - qtscript5-dev
       - libssh2-1-dev
-      - libcurl4-openssl-dev
       - qttools5-dev
       - qtconnectivity5-dev
       - libmarble-dev
