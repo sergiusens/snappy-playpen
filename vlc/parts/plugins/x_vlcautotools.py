@@ -77,5 +77,5 @@ class VlcAutotoolsPlugin(snapcraft.BasePlugin):
 
         self.run(configure_command + self.options.configflags)
         self.run(['make', '-j{}'.format(
-            snapcraft.common.get_parallel_build_count())])
+            self.project.parallel_build_count)])
         self.run(make_install_command)
