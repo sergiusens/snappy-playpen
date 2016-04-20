@@ -10,9 +10,9 @@ description: One to one chat with friends
  * And many more options!
 
 apps:
-  run:
+  qtox:
     command: launcher
-    plugs: [network, unity7, opengl]
+    plugs: [X11, network, unity7, opengl]
 
 parts:
   launcher:

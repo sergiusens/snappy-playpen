@@ -8,5 +8,6 @@ export XDG_DATA_HOME="$SNAP/usr/share"
 #export FONTCONFIG_PATH="$SNAP/etc/fonts/config.d"
 #export FONTCONFIG_FILE="$SNAP/etc/fonts/fonts.conf"
 #export XKB_CONFIG_ROOT="$SNAP/usr/share/X11/xkb"
+export QT_XKB_CONFIG_ROOT=/usr/share/X11/xkb
 
 exec "$SNAP/usr/bin/qtox" $*
