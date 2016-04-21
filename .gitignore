@@ -3,6 +3,8 @@
 .bzrignore
 __pycache__
 *~
-parts/launcher
-parts/notes
-parts/qt5conf
+notes/parts/launcher
+notes/parts/notes
+*/parts/qt5conf
+*/snap
+*/stage
