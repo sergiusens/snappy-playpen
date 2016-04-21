@@ -1,5 +1,5 @@
 name: notes-dpm
-version: 0.0.8+snap1
+version: 0.0.8+snap2
 summary: Note taking application, write down your thoughts.
 description: |
   Notes is a tool for the things you need to write down off your
@@ -27,7 +27,6 @@ parts:
       - libqt5core5a
   launcher:
     plugin: copy
-    after: [notes]
+    after: [notes, qt5conf]
     files:
       notes.wrapper: bin/notes
-      ../../notes/build/bin/Notes: bin/Notes
