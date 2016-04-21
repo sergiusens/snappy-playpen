@@ -12,7 +12,7 @@ To build, simply go to the `notes` directory and type:
 This project uses the following Snapcraft features
 - A custom Snapcraft plugin, derived from the `make` plugin. This is necessary to call the qmake step before doing the build
 - A [wiki-based](https://wiki.ubuntu.com/Snappy/Parts) part (`qt5conf`) needed to set up Qt apps to select their Qt version before starting
-- A wrapper that sets up environment variables before calling the binary
+- A [wrapper](https://github.com/dplanella/snappy-playpen/blob/master/notes/notes.wrapper) that sets up environment variables before calling the binary
 - The `copy` plugin to install the wrapper
 
 ## App functionality
@@ -30,6 +30,6 @@ The first warning might need setting an environment variable on the wrapper. The
 
 ### AppArmor denials
 
-Apr 21 13:30:06 host kernel: [118072.276749] audit: type=1400 audit(1461238206.897:1500): apparmor="DENIED" operation="chmod" profile="snap.notes-dpm.notes" name="/var/cache/fontconfig/" pid=15243 comm="Notes" requested_mask="w" denied_mask="w" fsuid=1000 ouid=0
+    Apr 21 13:30:06 host kernel: [118072.276749] audit: type=1400 audit(1461238206.897:1500): apparmor="DENIED" operation="chmod" profile="snap.notes-dpm.notes" name="/var/cache/fontconfig/" pid=15243 comm="Notes" requested_mask="w" denied_mask="w" fsuid=1000 ouid=0
 
 Denial trying to write to `/var/cache/fontconfig`, which seems to be quite common amongst snaps.
