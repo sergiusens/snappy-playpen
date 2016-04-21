@@ -9,7 +9,7 @@ description: |
 
 apps:
   notes:
-    command: notes
+    command: qt5-launch Notes
     plugs: [unity7, opengl, home]
 
 parts:
@@ -25,8 +25,4 @@ parts:
       - libqt5gui5
       - libqt5widgets5
       - libqt5core5a
-  launcher:
-    plugin: copy
-    after: [notes, qt5conf]
-    files:
-      notes.wrapper: bin/notes
+    after: [qt5conf]
